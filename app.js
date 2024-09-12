@@ -8,15 +8,15 @@ dotenv.config();
 
 const app = express();
 
-// app.use(cors());
 app.use(express.json());
-app.use(
-  cors({
-    origin: 'http://localhost:3000', // Allow requests only from this origin
-    methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allow specific methods
-    credentials: true, // If using cookies for authentication
-  })
-);
+app.use(cors());
+// app.use(
+//   cors({
+//     origin: 'http://localhost:3000', // Allow requests only from this origin
+//     methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allow specific methods
+//     credentials: true, // If using cookies for authentication
+//   })
+// );
 
 const PORT = process.env.DB_PORT || 5000;
 app.listen(PORT, () => {
