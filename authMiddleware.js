@@ -1,4 +1,3 @@
-// authMiddleware.js
 const jwt = require('jsonwebtoken');
 
 const authMiddleware = (req, res, next) => {
@@ -14,9 +13,10 @@ const authMiddleware = (req, res, next) => {
     }
 
     req.userId = decoded.id;
-    req.userRole = decoded.role; // Access user's role
+    req.userRole = decoded.role; 
     next();
   });
 };
 
 module.exports = authMiddleware;
+

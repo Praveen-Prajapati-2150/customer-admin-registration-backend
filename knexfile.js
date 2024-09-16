@@ -1,4 +1,3 @@
-// knexfile.js
 require('dotenv').config();
 
 // module.exports = {
@@ -10,7 +9,7 @@ require('dotenv').config();
 //       password: process.env.DB_PASS,
 //       database: process.env.DB_NAME,
 //       port: process.env.DB_PORT,
-//       ssl: { rejectUnauthorized: false }, // Required for Render.com SSL connection
+//       ssl: { rejectUnauthorized: false }, 
 //     },
 //     migrations: {
 //       tableName: 'knex_migrations',
@@ -22,8 +21,8 @@ module.exports = {
   development: {
     client: 'pg',
     connection: {
-      connectionString: process.env.DATABASE_URL, // Use the full connection string
-      ssl: { rejectUnauthorized: false }, // Enable SSL with relaxed security
+      connectionString: process.env.DATABASE_URL, 
+      ssl: { rejectUnauthorized: false }, 
     },
     migrations: {
       tableName: 'knex_migrations',
